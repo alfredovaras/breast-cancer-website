@@ -7,7 +7,9 @@ from PIL import Image
 # FIX ME: use environmental variables
 #URL_DA_API_DO_MODELO = 'http://127.0.0.1:8000/predict'
 
-URL_DA_API_DO_MODELO ='https://breast-cancer-image-baseline-test-jgvharqxta-uc.a.run.app/predict'
+#URL_DA_API_DO_MODELO ='https://breast-cancer-image-baseline-test-jgvharqxta-uc.a.run.app/predict'
+
+URL_DA_API_DO_MODELO = 'https://breast-cancer-image-baseline-app-state-http-jgvharqxta-uc.a.run.app/predict'
 
 model_api_url = URL_DA_API_DO_MODELO
 query_api_url = URL_DA_API_DO_MODELO
