@@ -12,7 +12,7 @@ from PIL import Image
 # modelo inicial
 # URL_DA_API_DO_MODELO = 'https://breast-cancer-image-baseline-app-state-http-jgvharqxta-uc.a.run.app/predict'
 
-URL_DA_API_DO_MODELO = 'https://breast-cancer-image-lewagon-model-jgvharqxta-uc.a.run.app'
+URL_DA_API_DO_MODELO = 'https://breast-cancer-image-lewagon-model-jgvharqxta-uc.a.run.app/predict'
 
 
 model_api_url = URL_DA_API_DO_MODELO
