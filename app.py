@@ -29,10 +29,14 @@ def call_api(api_url):
     if response.status_code == 200: #response_status_code==200:
         prediction = response.json()
         cancer_probability = prediction["Cancer probability"]
-        if cancer_probability > 0.65:
-            st.warning("Resultado da análise: Alta probabilidade de ter câncer")
+
+        if cancer_probability > 0.70:
+            st.error("Resultado da análise: Alta probabilidade de ter câncer")
+        elif cancer_probability > 0.40:
+            st.warning("Resultado da análise: Média probabilidade de ter câncer")
         else:
             st.success("Resultado da análise: Baixa probabilidade de ter câncer")
+
         st.warning(f"A probabilidade de câncer detectado é: {cancer_probability:.2%}")
     else:
         st.error("Ocorreu um erro ao processar a imagem.")
@@ -40,7 +44,6 @@ def call_api(api_url):
     # FIX ME: read with pydicom if dcm
     # If dicom, process
     # st.image(uploaded_image, caption='Imagem de Mamografia', use_column_width=True)
-
 
     return prediction
 
@@ -149,3 +152,28 @@ st.image(image, caption="LeWagon")
 # for percent_complete in range(100):
 #     time.sleep(0.025)
 #     my_bar.progress(percent_complete + 1, text=progress_text)
+
+
+# Lógica de chamada à API do modelo - BACKUP
+
+# def call_api(api_url):
+#     files = {'file': (uploaded_image.name, uploaded_image.getvalue(),'multipart/form-data')}
+#     response = requests.post(api_url, files = files )
+#     prediction = None
+
+#     if response.status_code == 200: #response_status_code==200:
+#         prediction = response.json()
+#         cancer_probability = prediction["Cancer probability"]
+#         if cancer_probability > 0.65:
+#             st.warning("Resultado da análise: Alta probabilidade de ter câncer")
+#         else:
+#             st.success("Resultado da análise: Baixa probabilidade de ter câncer")
+#         st.warning(f"A probabilidade de câncer detectado é: {cancer_probability:.2%}")
+#     else:
+#         st.error("Ocorreu um erro ao processar a imagem.")
+
+#     # FIX ME: read with pydicom if dcm
+#     # If dicom, process
+#     # st.image(uploaded_image, caption='Imagem de Mamografia', use_column_width=True)
+
+#     return prediction
