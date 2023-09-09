@@ -67,20 +67,20 @@ def process_form():
 
 # Configuração de cores e estilo do front-end
 st.set_page_config(page_title="Detecção de Câncer de Mama", page_icon="🎗️")
-st.markdown(
-    """
-    <style>
-    .stAlert {
-        padding: 10px;
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-        border-radius: 4px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+# st.markdown(
+#     """
+#     <style>
+#     .stAlert {
+#         padding: 10px;
+#         background-color: #f8d7da;
+#         color: #721c24;
+#         border: 1px solid #f5c6cb;
+#         border-radius: 4px;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True,
+# )
 
 # Título e cabeçalho
 st.title("Detecção de Câncer de Mama em Mamografias")
