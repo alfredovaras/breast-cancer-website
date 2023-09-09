@@ -37,7 +37,7 @@ def call_api(api_url):
         else:
             st.success("Resultado da análise: Baixa probabilidade de ter câncer")
 
-        st.warning(f"A probabilidade de câncer detectado é: {cancer_probability:.4%}")
+        st.warning(f"A probabilidade de câncer detectado é: {cancer_probability:.0%}")
     else:
         st.error("Ocorreu um erro ao processar a imagem.")
 
